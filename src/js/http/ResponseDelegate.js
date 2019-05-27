@@ -1,7 +1,7 @@
 /**
  * @interface
  */
-class ResponseDelegate {
+export class ResponseDelegate {
   /**
    * @return {number}
    */

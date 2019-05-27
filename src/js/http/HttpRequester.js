@@ -1,7 +1,7 @@
 /**
  * @interface
  */
-class HttpRequester {
+export class HttpRequester {
   /**
    * @return {ResponseDelegate}
    */
