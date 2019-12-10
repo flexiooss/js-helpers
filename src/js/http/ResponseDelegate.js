@@ -11,7 +11,7 @@ export class ResponseDelegate {
   /**
    * @return {string}
    */
-  body() {
+  payload() {
   }
 
   /**
