@@ -1,5 +1,4 @@
 /**
- * Generate an unique token
  * @param {string} [prefix='']
  * @return {string}
  * @function
