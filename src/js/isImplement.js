@@ -1,11 +1,17 @@
+import {isNull} from '@flexio-oss/assert'
+
+
 export const isImplement = (inst, constructorString) => {
   let proto = inst
-  do {
-    proto = Object.getPrototypeOf(proto)
-    if (proto.constructor.toString() === constructorString) {
-      return true
-    }
+  if (!isNull(proto)) {
 
-  } while (proto)
+    do {
+      if (proto.constructor.toString() === constructorString) {
+        return true
+      }
+      proto = Object.getPrototypeOf(proto)
+
+    } while (!isNull(proto))
+  }
   return false
 }
