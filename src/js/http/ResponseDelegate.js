@@ -9,7 +9,7 @@ export class ResponseDelegate {
   }
 
   /**
-   * @return {string}
+   * @return {Blob}
    */
   payload() {
   }
