@@ -1,6 +1,12 @@
 import {isNull} from '@flexio-oss/assert'
 
 
+/**
+ *
+ * @param inst
+ * @param constructorString
+ * @return {boolean}
+ */
 export const isImplement = (inst, constructorString) => {
   let proto = inst
   if (!isNull(proto)) {
