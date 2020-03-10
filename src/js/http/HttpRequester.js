@@ -3,45 +3,51 @@
  */
 export class HttpRequester {
   /**
+   * @param {ExecutorRequesterInterface~executionClb} callback
    * @return {ResponseDelegate}
    */
-  get() {
+  get(callback,) {
   }
 
   /**
+   * @param {ExecutorRequesterInterface~executionClb} callback
    * @param {?string} [contentType=null]
    * @param {?string} [body=null]
    * @return {ResponseDelegate}
    */
-  post(contentType = null, body = null) {
+  post(callback, contentType = null, body = null) {
   }
 
   /**
+   * @param {ExecutorRequesterInterface~executionClb} callback
    * @param {?string} contentType
    * @param {?string} body
    * @return {ResponseDelegate}
    */
-  put(contentType = null, body = null) {
+  put(callback, contentType = null, body = null) {
   }
 
   /**
+   * @param {ExecutorRequesterInterface~executionClb} callback
    * @param {?string} contentType
    * @param {?string} body
    * @return {ResponseDelegate}
    */
-  patch(contentType = null, body = null) {
+  patch(callback, contentType = null, body = null) {
   }
 
   /**
+   * @param {ExecutorRequesterInterface~executionClb} callback
    * @return {ResponseDelegate}
    */
-  delete() {
+  delete(callback) {
   }
 
   /**
+   * @param {ExecutorRequesterInterface~executionClb} callback
    * @return {ResponseDelegate}
    */
-  head() {
+  head(callback) {
   }
 
   /**
