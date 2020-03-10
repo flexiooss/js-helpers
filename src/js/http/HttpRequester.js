@@ -3,10 +3,29 @@
  */
 export class HttpRequester {
   /**
+   * @param inst
+   * @return {boolean}
+   */
+  static isHttpRequester(inst) {
+    return inst instanceof HttpRequester
+  }
+
+  /**
+   * @param inst
+   * @throws {TypeError}
+   */
+  static assertIsHttpRequester(inst) {
+    if (!HttpRequester.isHttpRequester(inst)) {
+      throw new TypeError('`inst` should be `HttpRequester`')
+    }
+  }
+
+  /**
    * @param {ExecutorRequesterInterface~executionClb} callback
    * @return {ResponseDelegate}
    */
   get(callback,) {
+    throw new Error('should be override')
   }
 
   /**
@@ -16,6 +35,7 @@ export class HttpRequester {
    * @return {ResponseDelegate}
    */
   post(callback, contentType = null, body = null) {
+    throw new Error('should be override')
   }
 
   /**
@@ -25,6 +45,7 @@ export class HttpRequester {
    * @return {ResponseDelegate}
    */
   put(callback, contentType = null, body = null) {
+    throw new Error('should be override')
   }
 
   /**
@@ -34,6 +55,7 @@ export class HttpRequester {
    * @return {ResponseDelegate}
    */
   patch(callback, contentType = null, body = null) {
+    throw new Error('should be override')
   }
 
   /**
@@ -41,6 +63,7 @@ export class HttpRequester {
    * @return {ResponseDelegate}
    */
   delete(callback) {
+    throw new Error('should be override')
   }
 
   /**
@@ -48,6 +71,7 @@ export class HttpRequester {
    * @return {ResponseDelegate}
    */
   head(callback) {
+    throw new Error('should be override')
   }
 
   /**
@@ -56,6 +80,7 @@ export class HttpRequester {
    * @return {HttpRequester}
    */
   parameter(name, value) {
+    throw new Error('should be override')
   }
 
   /**
@@ -64,6 +89,7 @@ export class HttpRequester {
    * @return {HttpRequester}
    */
   arrayParameter(name, values) {
+    throw new Error('should be override')
   }
 
   /**
@@ -72,6 +98,7 @@ export class HttpRequester {
    * @return {HttpRequester}
    */
   header(name, value) {
+    throw new Error('should be override')
   }
 
   /**
@@ -80,6 +107,7 @@ export class HttpRequester {
    * @return {HttpRequester}
    */
   arrayHeader(name, values) {
+    throw new Error('should be override')
   }
 
   /**
@@ -87,5 +115,6 @@ export class HttpRequester {
    * @return {HttpRequester}
    */
   path(path) {
+    throw new Error('should be override')
   }
 }
