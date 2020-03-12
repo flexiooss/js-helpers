@@ -3,15 +3,35 @@
  */
 export class ResponseDelegate {
   /**
-   * @return {number}
+   * @param inst
+   * @return {boolean}
    */
-  code() {
+  static isResponseDelegate(inst) {
+    return inst instanceof ResponseDelegate
   }
 
   /**
-   * @return {string}
+   * @param inst
+   * @throws {TypeError}
+   */
+  static assertIsResponseDelegate(inst) {
+    if (!ResponseDelegate.isResponseDelegate(inst)) {
+      throw new TypeError('`inst` should be `ResponseDelegate`')
+    }
+  }
+
+  /**
+   * @return {number}
+   */
+  code() {
+    throw new Error('should be override')
+  }
+
+  /**
+   * @return {Blob}
    */
   payload() {
+    throw new Error('should be override')
   }
 
   /**
@@ -20,11 +40,13 @@ export class ResponseDelegate {
    * @return {Array<string>}
    */
   header(name) {
+    throw new Error('should be override')
   }
 
   /**
    * @return {string}
    */
   contentType() {
+    throw new Error('should be override')
   }
 }
